@@ -5,45 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="screen active" id=" "start-screen >
+        <div class="screen active" id="start-screen">
             <h1>Quiz Time!</h1>
             <p>Test your knowledge with these fun questions</p>
-            <button id="start-btn"> Start Quiz </button>
+            <button id="start-btn">Start Quiz</button>
         </div>
-        
-        
-        
+
         <div class="screen" id="quiz-screen">
             <div class="quiz-header">
                 <h2 id="question-text">Question goes here</h2>
                 <div class="quiz-info">
                     <p>
-                        Question <span id="current-question">1</span> of <span>5</span>
+                        Question <span id="current-question">1</span> of <span id="total-questions">5</span>
                     </p>
-                    <p>Score: <span id ="score">0</span></p>
+                    <p>Score: <span id="score">0</span></p>
                 </div>
 
-                <div id="answers-container" class="answer-container">
-                    <!--entering answers here-->
-                </div>
+                <div id="answers-container" class="answers-container">
+                    </div>
 
                 <div class="progress-bar">
                     <div id="progress" class="progress"></div>
                 </div>
             </div>
+        </div>
 
-            <div id="result-screen" class="screen"></div>
-            <h1> Quiz Results</h1>
+        <div id="result-screen" class="screen">
+            <h1>Quiz Results</h1>
             <div class="result-info">
-                <p> You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
-
-                <div id="result-msg">Good job!</div>
-            </div>
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+                <div id="result-message">Good job!</div> </div>
             <button id="restart-btn">Restart Quiz</button>
         </div>
     </div>
+
+    <button id="theme-toggle" class="theme-toggle-button">
+        <i class="fas fa-moon"></i> </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
