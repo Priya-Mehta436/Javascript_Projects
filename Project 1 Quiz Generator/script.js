@@ -6,11 +6,11 @@ const startButton = document.getElementById("start-btn");
 const questionText = document.getElementById("question-text");
 const answersContainer = document.getElementById("answers-container");
 const currentQuestionSpan = document.getElementById("current-question");
-const totalQuestionsSpan = document.getElementById("total-questions"); // Corrected ID
+const totalQuestionsSpan = document.getElementById("total-questions");
 const scoreSpan = document.getElementById("score");
 const finalScoreSpan = document.getElementById("final-score");
 const maxScoreSpan = document.getElementById("max-score");
-const resultMessage = document.getElementById("result-message"); // Corrected ID
+const resultMessage = document.getElementById("result-message"); 
 const restartButton = document.getElementById("restart-btn");
 const progressBar = document.getElementById("progress");
 
@@ -142,24 +142,18 @@ function startQuiz() {
  */
 function showQuestion() {
     // Reset state for the new question
-    answersDisabled = false; // Enable answers for the new question
-    answersContainer.innerHTML = ""; // Clear previously displayed answers
-
-    // Get the current question from the shuffled array
+    answersDisabled = false; 
+    answersContainer.innerHTML = ""; 
+   
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
-
-    // Update question counter display
     currentQuestionSpan.textContent = currentQuestionIndex + 1;
-
-    // Calculate and update the progress bar width.
-    // The bar shows progress *before* answering the current question.
     const progressPercent = (currentQuestionIndex / shuffledQuestions.length) * 100;
     progressBar.style.width = progressPercent + "%";
 
     // Display the question text
     questionText.textContent = currentQuestion.question;
 
-    currentAnswerButtons = []; // Clear array to store new buttons
+    currentAnswerButtons = [];
 
     // Shuffle answers for the current question to randomize their order
     const shuffledAnswers = shuffleArray([...currentQuestion.answers]);
@@ -278,24 +272,3 @@ function restartQuiz() {
     startQuiz(); 
 }
 
-function toggleTheme() {
-    document.body.classList.toggle("dark");
-    const isDarkMode = document.body.classList.contains("dark");
-
-    // Save theme preference to localStorage
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-
-    // Change icon based on the new theme state
-    if (themeToggle) { // Ensure themeToggle exists before updating innerHTML
-        themeToggle.innerHTML = isDarkMode
-            ? '<i class="fas fa-sun"></i>' // Sun icon for dark mode
-            : '<i class="fas fa-moon"></i>'; // Moon icon for light mode
-    }
-   
-    if (themeToggle) { 
-        themeToggle.classList.add("theme-toggle-animate");
-        setTimeout(() => {
-            themeToggle.classList.remove("theme-toggle-animate");
-        }, 300);
-    }
-}
