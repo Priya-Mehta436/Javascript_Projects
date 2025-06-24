@@ -272,3 +272,24 @@ function restartQuiz() {
     startQuiz(); 
 }
 
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+    const isDarkMode = document.body.classList.contains("dark");
+
+    // Save theme preference to localStorage
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+
+    // Change icon based on the new theme state
+    if (themeToggle) { 
+        themeToggle.innerHTML = isDarkMode
+            ? '<i class="fas fa-sun"></i>' // Sun icon for dark mode
+            : '<i class="fas fa-moon"></i>'; // Moon icon for light mode
+    }
+   
+    if (themeToggle) { 
+        themeToggle.classList.add("theme-toggle-animate");
+        setTimeout(() => {
+            themeToggle.classList.remove("theme-toggle-animate");
+        }, 300);
+    }
+}
