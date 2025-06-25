@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     padding: 1rem; 
     font-family: sans-serif;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s; 
 }
 
 
