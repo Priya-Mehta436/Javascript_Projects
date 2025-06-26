@@ -206,19 +206,19 @@ function showResults() {
 
     // Set result message based on performance
     if (percentage === 100) {
-        resultMessage.textContent = "🥳 Perfect! You're a genius!";
+        resultMessage.textContent = "Perfect! You're a genius!";
         resultMessage.classList.add("text-green-600");
     } else if (percentage >= 80) {
-        resultMessage.textContent = "🌟 Great job! You know your stuff!";
+        resultMessage.textContent = " Great job!!!";
         resultMessage.classList.add("text-purple-600");
     } else if (percentage >= 60) {
-        resultMessage.textContent = "👍 Good effort! Keep learning!";
+        resultMessage.textContent = "Good effort! Keep learning!";
         resultMessage.classList.add("text-blue-600");
     } else if (percentage >= 40) {
-        resultMessage.textContent = "🤔 Not bad! Try again to improve!";
+        resultMessage.textContent = "Not bad! Try again!";
         resultMessage.classList.add("text-yellow-600");
     } else {
-        resultMessage.textContent = "📚 Keep studying! You'll get better!";
+        resultMessage.textContent = "Keep studying! You'll get better!";
         resultMessage.classList.add("text-red-600");
     }
 }
