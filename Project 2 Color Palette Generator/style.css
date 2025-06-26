@@ -9,7 +9,7 @@
 }
 
 body{
-    background: linear-gradient(135deg, #e0f7fa, #c1e7ed);
+    background: linear-gradient(135deg,#fffffe, #f3c35b);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -18,19 +18,20 @@ body{
 }
 
 .container {
-    background-color: #fff;
+    background-color: #fcfdca;
     border-radius: 1.25rem;
     padding:2.5rem;
     width: 100%;
     max-width: 880px;
-    box-shadow: 0 15px 30px rgba(0, 0 , 0 , 0.1);
+    box-shadow: 0 15px 30px rgba(152, 192, 7, 0.1);
+    border: 1.5px solid, #a58a05
 
 }
 
 h1{
     text-align: center;
     margin-bottom: 2rem;
-    color: #333;
+    color: #502e04;
     position: relative;
     padding-bottom: 0.8rem;
     font-size: 2.4rem;
@@ -44,13 +45,13 @@ h1::after{
     transform: translateX(-50%);
     width: 50%;
     height: 4px;
-    background-color: #f8fafd;
+    background-color: #a5b459;
     border-radius : 3px;
 }
 
 
 #generate-btn{
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(55deg, #eeb28a, #8a1301);
     color: white;
     border: none;
     padding:1rem 2rem;
@@ -65,7 +66,7 @@ h1::after{
 
 #generate-btn:hover{
     transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 18px rgba(51, 28, 1, 0.3);
 }
 
 #generate-btn:active{
@@ -75,7 +76,7 @@ h1::after{
 .palette-container{
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     
 }
 
@@ -97,7 +98,7 @@ h1::after{
 }
 
 .color-info{
-    background-color: #fff;
+    background-color: #fffffe;
     padding: 0.8rem;
     display: flex;
     align-items: center;
@@ -112,7 +113,7 @@ h1::after{
 
 .copy-btn{
     cursor: pointer;
-    color: #64748b;
+    color: #13161a;
     transform: color 0.2s;
 }
 
